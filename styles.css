@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.title__container {
+    position: fixed;
+    top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+
+    @media (max-height: 820px) {
+        position: inherit;
+    }
+}
+
+h2, h4 {
+    font-family: "Almarai", sans-serif;
+    margin: 0;
+}
+
+h4 {
+    font-weight: 300;
+    padding-top: 0.6rem;
+    border-top: 1px solid #ffffff63;
+    color: #acadad;
+}
+
+h2 {
+    border: none;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+:root {
+    --btn-border-radius: 2rem;
+    --font-color: #dedfdf;
+    --btn-filter-base: none;
+    --btn-filter-hover: brightness(1.3) contrast(1.3);
+    --btn-filter-active: brightness(1.4) contrast(1.4);
+}
+
+.section__buttons {
+    padding: 1rem;
+    max-width: 30vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container__button {
+    padding: 2px;
+    border-radius: var(--btn-border-radius);
+    background: linear-gradient(
+        270deg,
+        rgba(207, 254, 255, 1) -20%,
+        rgba(0, 245, 251, 1) 22%,
+        rgba(22, 100, 108, 1) 56%,
+        rgba(33, 59, 72, 1) 100%
+    ); 
+    transition: .4s ease-in-out;
+    filter: var(--btn-filter-base);
+}
+
+.container__button:hover {
+    filter: var(--btn-filter-base) var(--btn-filter-hover);
+    transform: translateY(-0.3rem);
+}
+
+.container__button:active {
+    transition: .1s ease-in-out;
+    transform: translateY(0rem);
+    filter: var(--btn-filter-base) var(--btn-filter-active);
+    box-shadow: 0 0 20px rgba(73, 176, 250, .4);
+}
+
+.btn {
+    position: relative;
+    padding: .6rem .8rem;
+    border-radius: var(--btn-border-radius);
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        270deg,
+        rgba(35, 115, 138, 1) 0%,
+        rgba(11, 37, 44, 1) 50%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    box-shadow: inset 0 0 15px rgba(73, 176, 250, .3);
+    cursor: pointer;
+}
+
+.btn__content {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.icon {
+    height: 1rem;
+    width: 1rem;
+    transition: .5s ease-in-out;
+}
+
+.text {
+    font-family: "Almarai", sans-serif;
+    color: var(--font-color);
+    font-weight: 400;
+    transition: .3s ease-in-out;
+    white-space: nowrap;
+}
+
+/* ========== IN-PROGRESS BUTTON =========== */
+.container__button_inprogress {
+    --btn-filter-base: hue-rotate(0deg);
+}
+
+/* ========== TO-DO BUTTON =========== */
+.container__button_todo {
+    --btn-filter-base: hue-rotate(60deg);
+}
+
+/* ========== IN-REVIEW BUTTON =========== */
+.container__button_inreview {
+    --btn-filter-base: hue-rotate(235deg);
+}
+
+/* ========== DESIGN-REVIEW BUTTON =========== */
+.container__button_designreview {
+    --btn-filter-base: hue-rotate(75deg);
+}
+
+/* ========== RETWORK BUTTON =========== */
+.container__button_retwork {
+    --btn-filter-base: hue-rotate(170deg);
+}
+
+/* ========== DONE BUTTON =========== */
+.container__button_done {
+    --btn-filter-base: hue-rotate(310deg);
+}
+
+/* ========== NOT-STARTED BUTTON =========== */
+.container__button_notstarted {
+    --btn-filter-base: hue-rotate(140deg);
+}
+
+/* ========== BLOCKED BUTTON =========== */
+.container__button_blocked {
+    --btn-filter-base: hue-rotate(170deg);
+}
+
+/* ========== ON-HOLD BUTTON =========== */
+.container__button_onhold {
+    --btn-filter-base: hue-rotate(40deg);
+}
+
+/* ========== ARCHIVED BUTTON =========== */
+.container__button_archived {
+    --btn-filter-base: grayscale(100%);
+}
