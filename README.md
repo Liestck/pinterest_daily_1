@@ -7,3 +7,6 @@ Reference: [Pinterest](https://ru.pinterest.com/pin/4714774604845666/)
 
 ## Stack
 HTML + CSS
+
+## Testing
+https://liestck.github.io/pinterest_daily_1/
