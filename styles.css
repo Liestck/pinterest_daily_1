@@ -45,7 +45,7 @@ h2 {
 
 :root {
     --btn-border-radius: 2rem;
-    --font-color: #dedfdf;
+    --font-color: #86F3F4;
     --btn-filter-base: none;
     --btn-filter-hover: brightness(1.3) contrast(1.3);
     --btn-filter-active: brightness(1.4) contrast(1.4);
