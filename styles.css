@@ -78,6 +78,10 @@ h2 {
 .container__button:hover {
     filter: var(--btn-filter-base) var(--btn-filter-hover);
     transform: translateY(-0.3rem);
+
+    &:not(.container__button_inreview):not(.container__button_retwork):not(.container__button_done) .icon {
+        transform: rotate(180deg);
+    }
 }
 
 .container__button:active {
